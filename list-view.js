@@ -1,4 +1,6 @@
 function initList() {
+    $(".k-primary").html('Table View');
+
     var dataSource = new kendo.data.DataSource({
         data: productList,
         pageSize: 6

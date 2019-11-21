@@ -1,4 +1,6 @@
 function initTable() {
+    $(".k-primary").html('List View');
+    
     var gridDataSource = new kendo.data.DataSource({
         data: productList,
         schema: {
@@ -22,7 +24,7 @@ function initTable() {
     
     $(".table").kendoGrid({
         dataSource: gridDataSource,
-        height: 500,
+        height: 600,
         pageable: true,
         sortable: true,
         filterable: true,

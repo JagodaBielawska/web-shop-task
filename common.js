@@ -1,6 +1,11 @@
 $("button").click(function(){
     $(".table").toggle();
     $(".list").toggle();
-    initList();
-    initTable();
+
+    if($(".table").css('display') == 'none'){
+      initList();
+    } else {
+      initTable();
+    }
+    
   });

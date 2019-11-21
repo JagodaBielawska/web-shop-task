@@ -1,3 +1,7 @@
+.k-primary {
+    min-width: 150px;
+}
+
 /* for toggling the view */
 .table {
     display: none;
