@@ -11,9 +11,25 @@
     </head>
     <body>
         <h1>Browse products</h1>
-        <div class="container"></div>
+        <button>Toggle</button>
+        <div class="table"></div>
 
+        <div class="list demo-section k-content wide">
+            <div id="listView"></div>
+            <div id="pager" class="k-pager-wrap"></div>
+        </div>
 
-        <script src="main.js"></script>
+        <script type="text/x-kendo-template" id="template">
+            <div class="product">
+                <img src="img/#=Picture#"/>
+                <h3>#:ProductName#</h3>
+                <p>#:kendo.toString(UnitPrice, "c")#</p>
+            </div>
+        </script>
+
+        <script src="data.js"></script>
+        <script src="common.js"></script>
+        <script src="table-view.js"></script>
+        <script src="list-view.js"></script>
     </body>
 </html>

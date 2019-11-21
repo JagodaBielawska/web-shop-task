@@ -1,5 +1,81 @@
-.product-picture{
+/* for toggling the view */
+.table {
+    display: none;
+}
+
+/* for table view */
+.product-picture {
     width: 200px;
     height: 200px;
     background-repeat: no-repeat;
+}
+
+/* for list view */
+#listView {
+    margin-bottom: -1px;
+    min-height: 300px;
+    /* Avoid cutout if font or line is bigger */
+    font: inherit;
+    width: 800px;
+    margin: 0 auto;
+    border: 0;
+}
+
+.product {
+    float: left;
+    position: relative;
+    width: 201px;
+    height: 260px;
+    margin: 0 30px 20px;
+    padding: 0;
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+}
+
+.product h3 {
+    margin: 0;
+    padding: 3px 5px 0 0;
+    max-width: 200px;
+    overflow: hidden;
+    line-height: 1.1em;
+    font-size: .9em;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #999;
+    text-align: center;
+}
+
+.product p {
+    visibility: hidden;
+    font-size: 50px;
+}
+
+.product:hover p {
+    visibility: visible;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 200px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0,0,0,0.75);
+    transition: background .2s linear, color .2s linear;
+    -moz-transition: background .2s linear, color .2s linear;
+    -webkit-transition: background .2s linear, color .2s linear;
+    -o-transition: background .2s linear, color .2s linear;
+}
+
+.k-listview:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
 }
