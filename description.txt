@@ -5,10 +5,14 @@ Task: Display of products like in a web shop
 
 For my project I didn't use any framework. I just used HTML, CSS and JavaScript files linked together.
 I decided to use the data provided in the task description - https://gist.github.com/Raisolution/2fa773f5b7009d4b7c487e7a0ae553c2 .
-I decided to create a git repository for the project - https://github.com/JagodaBielawska/web-shop-task . There you can see all of my commits and the progress on the project.
 
+I decided to create a git repository for the project . There you can see all of my commits and the progress on the project.- https://github.com/JagodaBielawska/web-shop-task 
 To download the project - download the ZIP file from the Git repository, extract it and open the index.html file in a web browser.
 
-I also decided to use two different views using Telerik Kendo UI components - a table view and a grid view. You can change between the views by clicking the button below "Browse products" in the web page.
+In my project I decided to use two different views using Telerik Kendo UI components - a table view and a grid view. You can change between the views by clicking the button below "Browse products" in the web page.
 The table is sortable and filterable. In the list view you can see the price by hovering over the image of the product.
 In both views there is pagination - on the bottom of the page you can navigate it.
+
+As for the feedback about Telerik components used - in my opinion it would be nice to:
+1. Include a "copy" button next to the code snippets. Copying with the mouse in a web browser is not convenient and not time efficient for the user.
+2. Limit the line length of the lines of code in the code snippets. Sometimes one line of code is very long and you have to scroll all the way to the bottom of the snippet to see what was not visible. Also having shorter line length is better for readability in general. 
