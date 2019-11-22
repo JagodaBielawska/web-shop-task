@@ -6,13 +6,15 @@
         <link href="https://kendo.cdn.telerik.com/2019.3.1023/styles/kendo.common.min.css" rel="stylesheet" />
         <link href="https://kendo.cdn.telerik.com/2019.3.1023/styles/kendo.material.min.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="style.css" />
-        <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://kendo.cdn.telerik.com/2019.3.1023/js/kendo.all.min.js"></script>
     </head>
     <body>
-        <h1>Browse products</h1>
-        <button class="k-primary">Table View</button>
-        <div class="table"></div>
+        <div class="centered">
+            <h1>Browse products</h1>
+            <button class="k-primary">Table View</button>
+        </div>
+        <div class="table hidden"></div>
 
         <div class="list demo-section k-content wide">
             <div id="listView"></div>
@@ -23,7 +25,10 @@
             <div class="product">
                 <img src="img/#=Picture#"/>
                 <h3>#:ProductName#</h3>
+                <span class="hidden stock-indication">Out of stock</span>
                 <p>#:kendo.toString(UnitPrice, "c")#</p>
+                <p class="stock hidden">#:UnitsInStock#</p>
+                
             </div>
         </script>
 

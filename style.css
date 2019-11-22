@@ -1,9 +1,14 @@
+/* for both views */
 .k-primary {
     min-width: 150px;
+    margin-left: 35px;
+    margin-bottom: 20px;
+}
+.centered {
+    margin-left: 40%;
 }
 
-/* for toggling the view */
-.table {
+.hidden {
     display: none;
 }
 
@@ -15,6 +20,13 @@
 }
 
 /* for list view */
+.stock-indication {
+    font-size: 25px;
+    margin-left: 35px;
+    color: red;
+    font-weight: bold;
+}
+
 #listView {
     margin-bottom: -1px;
     min-height: 300px;

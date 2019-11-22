@@ -9,3 +9,11 @@ $("button").click(function(){
     }
     
   });
+
+  $("div#pager").click(function(){
+    
+    if($(".table").css('display') == 'none'){
+        checkStocks();
+    }
+    
+  });

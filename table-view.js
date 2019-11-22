@@ -1,17 +1,17 @@
 function initTable() {
     $(".k-primary").html('List View');
-    
+
     var gridDataSource = new kendo.data.DataSource({
         data: productList,
         schema: {
             model: {
                 fields: {
+                    Picture: { type: "string"},
                     ProductID: { type: "number" },
                     ProductName: { type: "string" },
                     UnitPrice: { type: "number" },
                     UnitsInStock: { type: "number" },
-                    DeliveryOn: { type: "date" },
-                    Picture: { type: "string"}
+                    DeliveryOn: { type: "date" }
                 }
             }
         },
@@ -29,9 +29,10 @@ function initTable() {
         sortable: true,
         filterable: true,
         columns: [{
-            field:"ProductID",
-            title: "Product ID",
-            width: 160
+            template: "<div style='background-image: url(img/#:data.Picture#);' class='product-picture'></div>",
+            field: "Picture",
+            title: "Picture",
+            width: 210
         }, {
             field: "ProductName",
             title: "Product Name",
@@ -39,20 +40,14 @@ function initTable() {
         }, {
             field: "UnitPrice",
             title: "Unit Price",
-            width: 50,
+            width: 100,
         }, {
             field: "UnitsInStock",
             title: "Units In Stock",
-            width: 70,
-        }, {
-            field: "DeliveryOn",
-            title: "Delivery On",
             width: 100,
         }, {
-            template: "<div style='background-image: url(img/#:data.Picture#);' class='product-picture'></div>",
-            field: "Picture",
-            title: "Picture",
-            width: 210
+            field: "DeliveryOn",
+            title: "Delivery On"
         }]
     });
 }

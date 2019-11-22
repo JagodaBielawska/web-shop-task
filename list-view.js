@@ -14,6 +14,21 @@ function initList() {
         dataSource: dataSource,
         template: kendo.template($("#template").html())
     });
+
+    indicateStocks();
+    
+}
+
+function indicateStocks() {
+
+    let stocks = $('p.stock');
+
+    stocks.each(function() {
+    if(this.innerHTML == '0') {
+        this.parentElement.querySelectorAll("span")[0].style.display = "unset";
+        this.parentElement.querySelectorAll("h3")[0].style.textDecoration  = "line-through";
+    }
+  });
 }
 
 initList();
