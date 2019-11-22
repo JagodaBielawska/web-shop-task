@@ -34,6 +34,7 @@ function initTable() {
             title: "Product Name",
             width: 160,
         }, {
+            template: "$#:data.UnitPrice#",
             field: "UnitPrice",
             title: "Unit Price",
             width: 100,
@@ -52,10 +53,10 @@ function indicateStocksInTableView() {
 
     columns.each(function() {
         if(this.innerHTML == '0') {
-            this.innerHTML = "OUT OF STOCK";
+            this.innerHTML = "Out of stock";
             this.style.color  = "red";
             this.style.fontWeight  = "bold";
-            this.style.fontSize = "25px";
+            this.style.fontSize = "20px";
         }
       });
     
