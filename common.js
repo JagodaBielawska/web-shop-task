@@ -10,10 +10,12 @@ $("button").click(function(){
     
   });
 
-  $("div#pager").click(function(){
+  $("div.k-pager-wrap").click(function(){
     
     if($(".table").css('display') == 'none'){
-        checkStocks();
+      indicateStocksInListView();
+    } else {
+      indicateStocksInTableView();
     }
-    
+
   });

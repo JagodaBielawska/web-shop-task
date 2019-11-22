@@ -15,11 +15,7 @@ function initTable() {
                 }
             }
         },
-        pageSize: 5,
-        sort: {
-            field: "DeliveryOn",
-            dir: "desc"
-        }
+        pageSize: 5
     });
     
     $(".table").kendoGrid({
@@ -45,11 +41,24 @@ function initTable() {
             field: "UnitsInStock",
             title: "Units In Stock",
             width: 100,
-        }, {
-            field: "DeliveryOn",
-            title: "Delivery On"
         }]
     });
+
+    indicateStocksInTableView();
+}
+
+function indicateStocksInTableView() {
+    let columns = $("table tbody tr td:nth-child(4)"); 
+
+    columns.each(function() {
+        if(this.innerHTML == '0') {
+            this.innerHTML = "OUT OF STOCK";
+            this.style.color  = "red";
+            this.style.fontWeight  = "bold";
+            this.style.fontSize = "25px";
+        }
+      });
+    
 }
 
 initTable();

@@ -15,11 +15,11 @@ function initList() {
         template: kendo.template($("#template").html())
     });
 
-    indicateStocks();
+    indicateStocksInListView();
     
 }
 
-function indicateStocks() {
+function indicateStocksInListView() {
 
     let stocks = $('p.stock');
 
